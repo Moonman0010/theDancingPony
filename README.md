@@ -105,7 +105,7 @@
   "id": "64e80e9f1483b8349dfffed6",
   "rating": 1
   }
-> Can check all the ratings from the "/dish/:id" api's result in "rating" property which is an array of ratings given by different user
+> Can check all the ratings of a dish from the "/dish/:id" api's result, in "rating" property, which is an array of ratings given by different user
 
 
 

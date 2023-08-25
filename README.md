@@ -16,9 +16,9 @@
 
 POST call
 
-- **Description:** Create new user
+Create new user
 * **ExamplePaylod:**
-{
+* {
   "user_name": "Diego",
   "password": "Maradona",
   "nick_name": "El Pibe"
@@ -30,9 +30,9 @@ POST call
 
 POST call
 
-- **Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered api client 
+- It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered api client 
 - **ExamplePaylod:**
-  {
+- {
     "user_name": "Diego",
     "password": "Maradona"
   }
@@ -40,23 +40,26 @@ POST call
 # 2. '/dishes' 
 
 - All these api's are Private
-- All the apis in this section requires JWT token which expires every 15 minutes (*Note: can be changed from line 17 in dishRoute.js inside of Routes folder* ). 
+  
+- All the apis in this section requires JWT token which expires every 15 minutes (*Note: can be changed from line 17 in dishRoute.js inside of Routes folder* ).
+  
 - They also have a rate limit of 100 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
 
 ### 'http:localhost:5001/dishes'  
 
-**Description:** Will fetch the list of all the dishes with their ids. It also contains two query params *offset* and *skip* for pagination(for expamle set offset 2 and skip 2 you will get second and thrid documents).
+- Will fetch the list of all the dishes with their ids. It also contains two query params *offset* and *skip* for pagination(for expamle set offset 2 and skip 2 you will get second and thrid documents).
 
 ### 'http:localhost:5001/dish/:id'  
 
-**Description:** Will fetch the dish and all its properties like "its rating given by all or any users" with its "_id" from the list generated above.
+- Will fetch the dish and all its properties like "its rating given by all or any users" with its "_id" from the list generated above.
 
 ## POST
 ### 'http:localhost:5001/dishes/'  
 
-- **Description:** Create new dish
-- **ExamplePaylod:**{
-{
+- Create new dish
+- **ExamplePaylod:**
+- {
+  {
   "name": "Cheese", //mandatory and unique
   "description": "Middle earth fire bourn", //mandatory and unique
   "image": "https://images.app.goo.gl/Ac9k9sJ2cyQ1BTtV8](https://images.app.goo.gl/EoSTAFzZ8dACYgZf6",
@@ -72,8 +75,9 @@ POST call
 ## PUT
 ### 'http:localhost:5001/dish/:id'  
 
-- **Description:** Update already existing dish using "_id" from the dish list
-- **ExamplePaylod:**{
+- Update already existing dish using "_id" from the dish list
+- **ExamplePaylod:**
+- {
 {
   "name": "**Fire**Cheese", //mandatory and unique
   "description": "Middle earth fire bourn", //mandatory and unique
@@ -88,12 +92,12 @@ POST call
 ## DELETE
 ### 'http:localhost:5001/dish/:id'  
 
-**Description:** Delete existing dish using "_id" from the dish list
+Delete existing dish using "_id" from the dish list
 
 ## Post
 ### 'http://localhost:5001/dishes/rating'
 
-- **Description:** Add rating to any dish if you are authorized user by passint the id of the dish and the desired rating
+- Add rating to any dish if you are authorized user by passint the id of the dish and the desired rating
 - **Conditions:** 
     * Each dish can only be rated once by one user.
     * If current user name is 'Sméagol' you are not allowed to rate.

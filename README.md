@@ -30,7 +30,7 @@ POST call
 
 POST call
 
-- **Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered aapi client 
+- **Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered api client 
 - **ExamplePaylod:**
   {
     "user_name": "Diego",
@@ -54,8 +54,8 @@ POST call
 ## POST
 ### 'http:localhost:5001/dishes/'  
 
--**Description:** Create new dish
--**ExamplePaylod:**{
+- **Description:** Create new dish
+- **ExamplePaylod:**{
 {
   "name": "Cheese", //mandatory and unique
   "description": "Middle earth fire bourn", //mandatory and unique
@@ -72,8 +72,8 @@ POST call
 ## PUT
 ### 'http:localhost:5001/dish/:id'  
 
--**Description:** Update already existing dish using "_id" from the dish list
--**ExamplePaylod:**{
+- **Description:** Update already existing dish using "_id" from the dish list
+- **ExamplePaylod:**{
 {
   "name": "**Fire**Cheese", //mandatory and unique
   "description": "Middle earth fire bourn", //mandatory and unique
@@ -88,16 +88,21 @@ POST call
 ## DELETE
 ### 'http:localhost:5001/dish/:id'  
 
--**Description:** Delete existing dish using "_id" from the dish list
+**Description:** Delete existing dish using "_id" from the dish list
 
 ## Post
 ### 'http://localhost:5001/dishes/rating'
 
--**Description:** Add rating to any dish if you are authorized user 
--**Conditions:** 
+- **Description:** Add rating to any dish if you are authorized user by passint the id of the dish and the desired rating
+- **Conditions:** 
     * Each dish can only be rated once by one user.
     * If current user name is 'Sméagol' you are not allowed to rate.
     * Dishes can only be rated between 1-5 in whole numbers otherwise it will be rounded to the nearest whole number.
+-  **ExamplePaylod:**
+-  {
+  "id": "64e80e9f1483b8349dfffed6",
+  "rating": 1
+  }
 > Can check all the ratings from the "/dish/:id" api's result in "rating" property which is an array of ratings given by different user
 
 

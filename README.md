@@ -14,7 +14,8 @@
 
 ### 'http:localhost:5001/user/'  
 
-- POST call
+POST call
+
 -**Description:** Create new user
 -**ExamplePaylod:**
 {
@@ -27,7 +28,8 @@
 
 ### 'http:localhost:5001/login'  
 
-- POST call
+POST call
+
 -**Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered aapi client 
 -**ExamplePaylod:**
 {

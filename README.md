@@ -16,8 +16,8 @@
 
 POST call
 
--**Description:** Create new user
--**ExamplePaylod:**
+- **Description:** Create new user
+* **ExamplePaylod:**
 {
   "user_name": "Diego",
   "password": "Maradona",

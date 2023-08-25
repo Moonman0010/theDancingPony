@@ -12,11 +12,10 @@
 - These are Public api's
 - These api do not require JWt auththentication the post call was not not mentioned but I made it for efficacy feel free to create new authorized user.
 
-### 'http:localhost:5001/user/'  
+### 'http://localhost:5001/user/register'  
 
-POST call
-
-Create new user
+- POST call
+- Create new user
 * **ExamplePaylod:**
 * {
   "user_name": "Diego",
@@ -26,10 +25,9 @@ Create new user
   "email": "handOfGod@worldcup.com"
 }
 
-### 'http:localhost:5001/login'  
+### 'http://localhost:5001/user/login'  
 
-POST call
-
+- POST call
 - It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered api client 
 - **ExamplePaylod:**
 - {
@@ -46,16 +44,17 @@ POST call
 - They also have a rate limit of 100 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
 
 ### 'http:localhost:5001/dishes'  
-
+- GET call
 - Will fetch the list of all the dishes with their ids. It also contains two query params *offset* and *skip* for pagination(for expamle set offset 2 and skip 2 you will get second and thrid documents).
 
 ### 'http:localhost:5001/dish/:id'  
 
+- GET call
 - Will fetch the dish and all its properties like "its rating given by all or any users" with its "_id" from the list generated above.
 
-## POST
 ### 'http:localhost:5001/dishes/'  
 
+- POST call
 - Create new dish
 - **ExamplePaylod:**
 - {
@@ -72,9 +71,8 @@ POST call
 
 >NOTE: I added a extra validation here that all authorized users can see all the dishes but only the creator can update or delete it. Can remove this if not nessesary
 
-## PUT
 ### 'http:localhost:5001/dish/:id'  
-
+- PUT call
 - Update already existing dish using "_id" from the dish list
 - **ExamplePaylod:**
 - {
@@ -89,14 +87,14 @@ POST call
 }
 }
 
-## DELETE
 ### 'http:localhost:5001/dish/:id'  
 
-Delete existing dish using "_id" from the dish list
+- DELETE call
+- Delete existing dish using "_id" from the dish list
 
-## Post
 ### 'http://localhost:5001/dishes/rating'
 
+-POST call
 - Add rating to any dish if you are authorized user by passint the id of the dish and the desired rating
 - **Conditions:** 
     * Each dish can only be rated once by one user.

@@ -1,16 +1,16 @@
 # theDancingPony
 
 ## How to run
-> Clone the repo attach the provided .env file 
-> npm i
-> npm run start
+- Clone the repo attach the provided .env file 
+- npm i
+- npm run start
 
-The api's in this code are divided in two parts
+# The api's in this code are divided in two parts
 
-# 1. '/user' (public)
+## 1. '/user' (public)
 
-> Public
-> These api do not require JWt auththentication the post call was not not mentioned built it for efficacy feel free to create new authorized user.
+- Public
+- These api do not require JWt auththentication the post call was not not mentioned built it for efficacy feel free to create new authorized user.
 
 ## POST
 ### 'http:localhost:5001/user/'  
@@ -37,9 +37,9 @@ The api's in this code are divided in two parts
 
 # 2. '/dishes' 
 
-> Private
-> All the apis in this section require JWT token which expires every 15 minutes (*Note: can be changed from line 17 in dishRoute.js inside of Routes folder* ). 
-> They also have a rate limit of 50 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
+- Private
+- All the apis in this section require JWT token which expires every 15 minutes (*Note: can be changed from line 17 in dishRoute.js inside of Routes folder* ). 
+- They also have a rate limit of 50 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
 
 ## GET
 ### 'http:localhost:5001/dishes'  

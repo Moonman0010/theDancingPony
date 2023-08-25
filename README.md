@@ -30,12 +30,12 @@ POST call
 
 POST call
 
--**Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered aapi client 
--**ExamplePaylod:**
-{
-  "user_name": "Diego",
-  "password": "Maradona"
-}
+- **Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered aapi client 
+- **ExamplePaylod:**
+  {
+    "user_name": "Diego",
+    "password": "Maradona"
+  }
 
 # 2. '/dishes' 
 

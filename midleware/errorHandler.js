@@ -11,7 +11,6 @@ const errorHandler = (err,req, res, next) => {
     res.json({tilte:"Forbidden",message: err.message, StackTrace: err.stack});
     if(statusCode == constants.SERVER_ERROR)
     res.json({tilte:"Server Error",message: err.message, StackTrace: err.stack});
-    console.log("no errors")
 }
 
 module.exports = errorHandler

@@ -9,12 +9,12 @@
 
 ## 1. '/user' (public)
 
-- Public
-- These api do not require JWt auththentication the post call was not not mentioned built it for efficacy feel free to create new authorized user.
+- These are Public api's
+- These api do not require JWt auththentication the post call was not not mentioned but I made it for efficacy feel free to create new authorized user.
 
-## POST
 ### 'http:localhost:5001/user/'  
 
+- POST call
 -**Description:** Create new user
 -**ExamplePaylod:**
 {
@@ -25,9 +25,9 @@
   "email": "handOfGod@worldcup.com"
 }
 
-## POST
 ### 'http:localhost:5001/login'  
 
+- POST call
 -**Description:** It will provide the JWT token for the created user. Use this token with "Bearer" in auth tab of preffered aapi client 
 -**ExamplePaylod:**
 {
@@ -37,11 +37,10 @@
 
 # 2. '/dishes' 
 
-- Private
-- All the apis in this section require JWT token which expires every 15 minutes (*Note: can be changed from line 17 in dishRoute.js inside of Routes folder* ). 
-- They also have a rate limit of 50 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
+- All these api's are Private
+- All the apis in this section requires JWT token which expires every 15 minutes (*Note: can be changed from line 17 in dishRoute.js inside of Routes folder* ). 
+- They also have a rate limit of 100 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
 
-## GET
 ### 'http:localhost:5001/dishes'  
 
 **Description:** Will fetch the list of all the dishes with their ids. It also contains two query params *offset* and *skip* for pagination(for expamle set offset 2 and skip 2 you will get second and thrid documents).

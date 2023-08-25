@@ -43,16 +43,16 @@
   
 - They also have a rate limit of 100 hits per hour (*Note: can be changed from controller > userController.js > line 54*).
 
-### 'http:localhost:5001/dishes'  
+### 'http://localhost:5001/dishes'  
 - GET call
 - Will fetch the list of all the dishes with their ids. It also contains two query params *offset* and *skip* for pagination(for expamle set offset 2 and skip 2 you will get second and thrid documents).
 
-### 'http:localhost:5001/dish/:id'  
+### 'http://localhost:5001/dish/:id'  
 
 - GET call
 - Will fetch the dish and all its properties like "its rating given by all or any users" with its "_id" from the list generated above.
 
-### 'http:localhost:5001/dishes/'  
+### 'http://localhost:5001/dishes/'  
 
 - POST call
 - Create new dish
@@ -71,7 +71,7 @@
 
 >NOTE: I added a extra validation here that all authorized users can see all the dishes but only the creator can update or delete it. Can remove this if not nessesary
 
-### 'http:localhost:5001/dish/:id'  
+### 'http://localhost:5001/dish/:id'  
 - PUT call
 - Update already existing dish using "_id" from the dish list
 - **ExamplePaylod:**
@@ -87,7 +87,7 @@
 }
 }
 
-### 'http:localhost:5001/dish/:id'  
+### 'http://localhost:5001/dish/:id'  
 
 - DELETE call
 - Delete existing dish using "_id" from the dish list
